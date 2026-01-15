@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nejra Ramić - Lov na kuglice</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="topHud">
+    <h1>LOV NA KUGLICE</h1>
+    <div id="hudTimer">00:00</div>
+</div>
+
+<div id="controls">
+    <button id="pauseBtn">⏸</button>
+    <button id="quitBtn">⏹</button>
+    <button id="soundToggle">🔊</button>
+</div>
+
+<div class="playground">
+    <div id="player"></div>
+</div>
+
+<div id="bottomPanel">
+    <span>SCORE</span>
+    <strong id="score">0</strong>
+</div>
+
+<div id="startScreen" class="overlay">
+    <h2>Pravila igre</h2>
+    <ul>
+        <li>Koristi strelice na tastaturi za kretanje</li>
+        <li>Za telefon, swipe-ajte kuglicu</li>
+        <li>Jedeš kuglice manje od sebe</li>
+        <li>Ako udariš u veću → GAME OVER</li>
+        <li>Svaka pojedena kuglica te malo poveća</li>
+        <li>Preživi što duže i sakupi što više bodova</li>
+    </ul>
+    <button id="startBtn" class="mainBtn">Započni igru</button>
+</div>
+
+<!--W3School-->
+<div id="pauseScreen" class="overlay hidden">
+    <h2>Pauzirano</h2>
+    <button id="resumeBtn" class="mainBtn">Nastavi</button>
+</div>
+
+<div id="quitScreen" class="overlay hidden">
+    <h2>Prekinuti igru?</h2>
+    <div class="row">
+        <button id="quitYes" class="dangerBtn">Da</button>
+        <button id="quitNo" class="mainBtn">Ne</button>
+    </div>
+</div>
+
+<div id="gameOver" class="overlay hidden">
+    <h2>GAME OVER</h2>
+    <p id="finalTime"></p>
+    <p id="finalScore"></p>
+    <button onclick="location.reload()" class="mainBtn">Igraj ponovo</button>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="Sneaky Snitch (Kevin MacLeod) - Background Music (HD).mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
